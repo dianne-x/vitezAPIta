@@ -17,11 +17,17 @@ Install-Package Microsoft.EntityFrameworkCore.Tools
 
 Scaffold-DbContext "Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=nascar;Integrated Security=True;Connect Timeout=30;Encrypt=False;Trust Server Certificate=False;Application Intent=ReadWrite;Multi Subnet Failover=False" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models -Context NascarDbContext -DataAnnotations
 
+## az adatbazist kikell valasztani, LENYITNI es onnan a propertisbol meglehet talalni a dbcontext connection stringet
+
+## NascarDBContext helyett lehet akarmi csak ne utkozzon semmi massal
+
+
 --- to appsettings.json: ---
 "ConnectionStrings": {
     "DefaultConnection": "Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=nascar;Integrated Security=True;Connect Timeout=30;Encrypt=False;Trust Server Certificate=False;Application Intent=ReadWrite;Multi Subnet Failover=False"
   },
 
+(tetjére)
 --- to program.cs ---
 var connectionString = builder.Configuration
 	.GetConnectionString("DefaultConnection");
