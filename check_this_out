@@ -28,7 +28,12 @@ Scaffold-DbContext "Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=nascar;In
   },
 
 (tetjére)
+
+
 --- to program.cs ---
+## builder.Services.addcontroller fölé mindenféle képpen különben az utan mar read-only futtatasnal.
+
+
 var connectionString = builder.Configuration
 	.GetConnectionString("DefaultConnection");
 builder.Services
